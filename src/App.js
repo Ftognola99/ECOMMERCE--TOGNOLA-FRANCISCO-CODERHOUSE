@@ -10,18 +10,17 @@ import { Children } from "react";
 const App = () => {
   return (
     <div className="background">
-      <CartProvider>
-        <BrowserRouter>
-        <NavBar/>
-        <Routes>
-        <Route path="/" element={<ItemListContainer greetings="lista de productos" textColor="white"/>}/>
-        <Route path="/productos" element={<ItemListContainer greetings="lista de productos" textColor="white"/>}/>
-        <Route path="/detalle/:id" element={<ItemDetailContainer/>}/>
-        <Route path="/categoria/;categoriaId" element={<ItemListContainer greetings={Children.categoriaId}textColor="white"/>}/>
-        <Route path="/cart" element={<Cart/>}/>
-        </Routes>
-        </BrowserRouter>
-        </CartProvider>
+      <CartProvider></CartProvider>
+      <BrowserRouter></BrowserRouter>
+      <NavBar></NavBar>
+      <Routes>
+      <Route path="/" element={<ItemListContainer greetings="Lista de Productos" textColor="white"/>}/>
+      <Route path="/productos" element={<ItemListContainer greetings="Lista de Productos" textColor="white"/>}/>
+      <Route path="/detalle/:id" element={<ItemDetailContainer/>}/>
+      <Route path="/categoria/:categoriaId" element={<ItemListContainer greetings={Children.categoriaId} textColor="white"/>}/>
+      <Route path="/cart" element={<Cart/>}/>
+      </Routes>
+
     </div>
   );
 }
