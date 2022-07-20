@@ -1,5 +1,5 @@
 import {usestate} from 'react'
-import item from '../item/item';
+import item from '../Item/item';
 
 const itemCount =({stock, initial, onAdd}) => {
     const [count, setCount] = usestate(initial);
@@ -28,4 +28,4 @@ const itemCount =({stock, initial, onAdd}) => {
 
 }
 
-    export default itemCount
+    export default itemCount;
